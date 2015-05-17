@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="connection.url">jdbc:mysql://srv.iits.uni-ruse.bg:3306/db105</property>
+		<property name="connection.username">inf105</property>
+		<property name="connection.password">inf105pass</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		
+		<property name="hbm2ddl.auto">update</property>
+		<!-- <property name="hbm2ddl.auto">create</property> -->
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">105</property>
+		<property name="current_session_context_class">thread</property>
+
+		<mapping class="org.ami.user.User" />
+
+	</session-factory>
+</hibernate-configuration>

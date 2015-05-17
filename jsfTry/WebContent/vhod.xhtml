@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:body>
+	<h:outputText value="Grand Theft Auto V LOGIN" />
+
+	<h:form>
+		<h:outputText value="email :"></h:outputText>
+		<h:inputText id="email" value="#{login.email}" required="true"
+			requiredMessage="Please Enter Username!"></h:inputText>
+		<br />
+		<h:outputText value="Password :"></h:outputText>
+		<h:inputText id="password" value="#{login.password}" required="true"
+			requiredMessage="Please Enter Password!"></h:inputText>
+
+		<h:commandButton action="#{login.validateAndSend}" value="Send"/>
+
+	</h:form>
+</h:body>
+</html>
